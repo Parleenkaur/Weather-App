@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1> Weather App</h1>
+    <input id="locationInput" type="text" value="sydney" placeholder="Enter City or Zip Code">
+    <div style="display: flex;">
+        <button id="getWeather"> Get Weather</button>
+        <div style=" font-size: 24px; color: grey; padding: 16px; cursor: pointer;">
+            <span id="f" onclick="updateUnit(true)"> F </span>
+            |
+            <span id="c" onclick="updateUnit(false)"> C </span>
+        </div>
+        <div style="padding: 20px 4px;">
+            <label>Days: </label>
+            <select id="dropdown" onchange="selectDays()">
+            </select>
+        </div>
+    </div>
+
+    <div id="currentWeather" style="display: none">
+        <h3>Current Weather</h3>
+        <span id="icon-container">
+            <img id="icon" src=" ">
+            <span id="condition"></span>
+        </span>
+        <div class="temperature">
+            <span id="temp"></span>
+            <span id="cityName"></span>
+        </div>
+    </div>
+    <div id="forecast" style="display: none;"></div>
+</div>
+
+</body>
+</html>
